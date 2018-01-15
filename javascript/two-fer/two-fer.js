@@ -6,7 +6,9 @@ TwoFer.prototype.twoFer = function (who) {
   // in some way. In this example, it is just
   // returned, but your solution will have to
   // use a conditional.
-  return who;
+  
+  const message = `One for ${who===undefined? 'you': who}, one for me.`;
+  return message;
 };
 
 module.exports = TwoFer;
