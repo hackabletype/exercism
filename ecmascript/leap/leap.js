@@ -4,16 +4,6 @@ export default class Year {
   }
 
   isLeap() {
-    let returnValue = false;
-    if (this.year % 4 === 0) {
-      returnValue = true;
-      if (this.year % 100 === 0) {
-        returnValue = false;
-        if (this.year % 400 === 0) {
-          returnValue = true;
-        }
-      }
-    }
-    return returnValue;
+    return this.year % 400 === 0 || (this.year % 4 === 0 && this.year % 100 !== 0);
   }
 }
